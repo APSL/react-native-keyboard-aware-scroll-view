@@ -21,7 +21,7 @@
     "react",
     "react-native",
     "scrollview",
-    "keyboard"
+    "keyboard",
     "ios",
     "android",
     "react-component"
