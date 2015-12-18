@@ -2,7 +2,7 @@ import KeyboardAwareMixin from './lib/KeyboardAwareMixin'
 import KeyboardAwareScrollView from './lib/KeyboardAwareScrollView'
 import KeyboardAwareListView from './lib/KeyboardAwareListView'
 
-export default {
+export {
   KeyboardAwareMixin,
   KeyboardAwareScrollView,
   KeyboardAwareListView
