@@ -4,3 +4,9 @@ AwesomeProject.xcodeproj
 AwesomeProjectTests
 index.ios.js
 iOS
+*.iml
+**/.DS_Store
+.gradle
+.idea
+build
+*.tgz

@@ -1,0 +1,38 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:1.5.0"
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+apply plugin: "com.android.library"
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0.0"
+    }
+
+    lintOptions {
+        disable "GradleDynamicVersion", "InvalidPackage"
+    }
+}
+
+dependencies {
+    compile "com.facebook.react:react-native:0.19.+"
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = "2.2.1"
+}
