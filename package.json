@@ -34,5 +34,5 @@
   "homepage": "https://github.com/APSL/react-native-keyboard-aware-scroll-view#readme",
   "dependencies": {
     "react-timer-mixin": "^0.13.3"
-  },
+  }
 }
