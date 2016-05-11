@@ -50,6 +50,20 @@ _scrollToInput (event, reactNode) {
 </KeyboardAwareScrollView>
 ```
 
+## Register to keyboard events
+You can register to `ScrollViewResponder` events `onKeyboardWillShow` and `onKeyboardWillHide`:
+
+```js
+<KeyboardAwareScrollView
+  onKeyboardWillShow={(frames: Object) => {
+    console.log('Keyboard event', frames)
+  }}>
+  <View>
+    <TextInput />
+  </View>
+</KeyboardAwareScrollView>
+```
+
 ## License
 
 MIT.
