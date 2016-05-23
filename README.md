@@ -1,8 +1,11 @@
 # react-native-keyboard-aware-scroll-view
 A ScrollView component that handles keyboard appearance.
 
+## Supported versions
+Use `react-native>=0.25.0` for `v0.0.7` and `v0.0.6` for older RN versions.
+
 ## Installation
-You can install this component through ``npm``:
+Installation can be done through ``npm``:
 
 ```shell
 npm i react-native-keyboard-aware-scroll-view --save
@@ -31,6 +34,38 @@ import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view
 
 The component accepts the experimental prop ``viewIsInsideTabBar``, which tries
 to solve resizing issues when rendering inside a ``TabBar`` component.
+
+## Auto-scroll in `TextInput` fields
+In order to perform an auto-scroll whenever a `TextInput` field gets focused, you can use the built-in method `scrollToFocusedInput`. Define the following function for each of your `onFocus` event on your inputs:
+
+```js
+_scrollToInput (event, reactNode) {
+  // Add a 'scroll' ref to your ScrollView
+  this.refs.scroll.scrollToFocusedInput(event, reactNode)
+}
+```
+
+```jsx
+<KeyboardAwareScrollView ref='scroll'>
+  <View>
+    <TextInput ref='myInput' onFocus={this._scrollToInput}/>
+  </View>
+</KeyboardAwareScrollView>
+```
+
+## Register to keyboard events
+You can register to `ScrollViewResponder` events `onKeyboardWillShow` and `onKeyboardWillHide`:
+
+```js
+<KeyboardAwareScrollView
+  onKeyboardWillShow={(frames: Object) => {
+    console.log('Keyboard event', frames)
+  }}>
+  <View>
+    <TextInput />
+  </View>
+</KeyboardAwareScrollView>
+```
 
 ## License
 
