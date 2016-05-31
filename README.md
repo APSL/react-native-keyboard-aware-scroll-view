@@ -1,8 +1,12 @@
 # react-native-keyboard-aware-scroll-view
-A ScrollView component that handles keyboard appearance.
+A ScrollView component that handles keyboard appearance and automatically scrolls to focused `TextInput`.
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/wiki/APSL/react-native-keyboard-aware-scroll-view/kasv.gif" alt="Scroll demo" width="400">
+</p>
 
 ## Supported versions
-Use `react-native>=0.25.0` for `v0.0.7` and `v0.0.6` for older RN versions.
+Use `react-native>=0.25.0` for `v0.0.7` & up and `v0.0.6` for older RN versions.
 
 ## Installation
 Installation can be done through ``npm``:
@@ -32,25 +36,35 @@ import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view
 </KeyboardAwareScrollView>
 ```
 
-The component accepts the experimental prop ``viewIsInsideTabBar``, which tries
-to solve resizing issues when rendering inside a ``TabBar`` component.
-
 ## Auto-scroll in `TextInput` fields
-In order to perform an auto-scroll whenever a `TextInput` field gets focused, you can use the built-in method `scrollToFocusedInput`. Define the following function for each of your `onFocus` event on your inputs:
+As of `v0.1.0`, the component auto scrolls to the focused `TextInput` 😎. For versions `v0.0.7` and older you can do the following.
+
+### Programatically scroll to any `TextInput`
+In order to scroll to any `TextInput` field, you can use the built-in method `scrollToFocusedInput`. Example:
 
 ```js
-_scrollToInput (event, reactNode) {
+_scrollToInput (reactNode: any) {
   // Add a 'scroll' ref to your ScrollView
-  this.refs.scroll.scrollToFocusedInput(event, reactNode)
+  this.refs.scroll.scrollToFocusedInput(reactNode)
 }
 ```
 
 ```jsx
 <KeyboardAwareScrollView ref='scroll'>
   <View>
-    <TextInput ref='myInput' onFocus={this._scrollToInput}/>
+    <TextInput onFocus={(event: Event) => {
+      // `bind` the function if you're using ES6 classes
+      this._scrollToInput(ReactNative.findNodeHandle(event.target))
+    }/>
   </View>
 </KeyboardAwareScrollView>
+```
+
+### Programatically scroll to any position
+There's another built-in function that lets you programatically scroll to any position of the scroll view:
+
+```js
+this.refs.scroll.scrollToPosition(0, 0, true)
 ```
 
 ## Register to keyboard events
@@ -66,6 +80,16 @@ You can register to `ScrollViewResponder` events `onKeyboardWillShow` and `onKey
   </View>
 </KeyboardAwareScrollView>
 ```
+
+## API
+### Props
+All the `ScrollView`/`ListView` props will be passed.
+
+| **Prop** | **Type** | **Description** |
+|----------|----------|-----------------|
+| `viewIsInsideTabBar` | `boolean` | Adds an extra offset that represents the `TabBarIOS` height. |
+| `resetScrollToCoords` | `Object: {x: number, y: number}` | Coordinates that will be used to reset the scroll when the keyboard hides. |
+
 
 ## License
 
