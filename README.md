@@ -1,4 +1,7 @@
 # react-native-keyboard-aware-scroll-view
+
+<img src="https://travis-ci.org/APSL/react-native-keyboard-aware-scroll-view.svg?branch=master" />
+
 A ScrollView component that handles keyboard appearance and automatically scrolls to focused `TextInput`.
 
 <p align="center">
