@@ -9,7 +9,9 @@ A ScrollView component that handles keyboard appearance and automatically scroll
 </p>
 
 ## Supported versions
-Use `react-native>=0.25.0` for `v0.0.7` & up and `v0.0.6` for older RN versions.
+`v0.1.2` requires `RN>=0.27.2`
+`v0.0.7` requires `react-native>=0.25.0`
+use `v0.0.6` for older RN versions.
 
 ## Installation
 Installation can be done through ``npm``:
