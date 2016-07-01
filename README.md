@@ -1,4 +1,7 @@
 # react-native-keyboard-aware-scroll-view
+
+<img src="https://travis-ci.org/APSL/react-native-keyboard-aware-scroll-view.svg?branch=master" />
+
 A ScrollView component that handles keyboard appearance and automatically scrolls to focused `TextInput`.
 
 <p align="center">
@@ -6,7 +9,9 @@ A ScrollView component that handles keyboard appearance and automatically scroll
 </p>
 
 ## Supported versions
-Use `react-native>=0.25.0` for `v0.0.7` & up and `v0.0.6` for older RN versions.
+`v0.1.2` requires `RN>=0.27.2`
+`v0.0.7` requires `react-native>=0.25.0`
+use `v0.0.6` for older RN versions.
 
 ## Installation
 Installation can be done through ``npm``:
@@ -89,6 +94,7 @@ All the `ScrollView`/`ListView` props will be passed.
 |----------|----------|-----------------|
 | `viewIsInsideTabBar` | `boolean` | Adds an extra offset that represents the `TabBarIOS` height. |
 | `resetScrollToCoords` | `Object: {x: number, y: number}` | Coordinates that will be used to reset the scroll when the keyboard hides. |
+| `enableAutoAutomaticScroll` | `boolean` | When focus in TextInput will scroll the position, default is enabled. |
 
 
 ## License
