@@ -96,6 +96,7 @@ All the `ScrollView`/`ListView` props will be passed.
 | `viewIsInsideTabBar` | `boolean` | Adds an extra offset that represents the `TabBarIOS` height. |
 | `resetScrollToCoords` | `Object: {x: number, y: number}` | Coordinates that will be used to reset the scroll when the keyboard hides. |
 | `enableAutoAutomaticScroll` | `boolean` | When focus in TextInput will scroll the position, default is enabled. |
+| `keyboardOpeningTime` | `number` | Sets the delay time before scrolling to new position, default is 250 |
 | `extraHeight` | `number` | Adds an extra offset |
 
 ## License
