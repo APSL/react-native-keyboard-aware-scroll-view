@@ -99,6 +99,7 @@ All the `ScrollView`/`ListView` props will be passed.
 | `enableAutoAutomaticScroll` | `boolean` | When focus in `TextInput` will scroll the position, default is enabled. |
 | `extraHeight` | `number` | Adds an extra offset when focusing the `TextInput`s. |
 | `extraScrollHeight` | `number` | Adds an extra offset to the keyboard. Useful if you want to stick elements above the keyboard. |
+| `enableResetScrollToCoords` | `boolean` | Lets the user enable or disable automatic resetScrollToCoords. |
 
 ## License
 
