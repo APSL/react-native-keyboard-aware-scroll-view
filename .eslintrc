@@ -181,9 +181,10 @@
     "no-bitwise": 1,
     "no-plusplus": 0,
 
+    "jsx-quotes": [1, "prefer-single"],
+
     "react/display-name": 0,
     "react/jsx-boolean-value": 0,
-    "react/jsx-quotes": [1, "single", "avoid-escape"],
     "react/jsx-no-undef": 1,
     "react/jsx-sort-props": 0,
     "react/jsx-uses-react": 0,
