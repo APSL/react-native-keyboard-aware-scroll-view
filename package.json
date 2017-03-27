@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint lib",
-    "test": "npm run lint"
+    "test": "npm run lint",
+    "flow": "flow check"
   },
   "repository": {
     "type": "git",
@@ -39,6 +40,7 @@
   "devDependencies": {
     "babel-eslint": "^6.0.4",
     "eslint": "^3.17.1",
-    "eslint-plugin-react": "^6.10.0"
+    "eslint-plugin-react": "^6.10.0",
+    "flow-bin": "0.33.0"
   }
 }
