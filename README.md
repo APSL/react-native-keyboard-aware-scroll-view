@@ -104,6 +104,14 @@ All the `ScrollView`/`ListView` props will be passed.
 | `extraScrollHeight` | `number` | Adds an extra offset to the keyboard. Useful if you want to stick elements above the keyboard. |
 | `enableResetScrollToCoords` | `boolean` | Lets the user enable or disable automatic resetScrollToCoords. |
 
+### Methods
+
+| **Method** | **Parameter** | **Description** |
+|------------|---------------|-----------------|
+| `getScrollResponder` | `void` | Get `ScrollResponder` |
+| `scrollToPosition` | `x: number, y: number, animated: bool = true` | Scroll to specific position with or without animation. |
+| `scrollToEnd` | `animated?: bool = true` | Scroll to end with or without animation. |
+
 ## License
 
 MIT.
