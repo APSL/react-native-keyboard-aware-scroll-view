@@ -1,6 +1,10 @@
 # react-native-keyboard-aware-scroll-view
 
+<p>
 <img src="https://travis-ci.org/APSL/react-native-keyboard-aware-scroll-view.svg?branch=master" />
+<img src="https://img.shields.io/npm/dm/react-native-keyboard-aware-scroll-view.svg" />
+<img src="https://img.shields.io/npm/dt/react-native-keyboard-aware-scroll-view.svg" />
+</p>
 
 A ScrollView component that handles keyboard appearance and automatically scrolls to focused `TextInput`.
 
@@ -95,9 +99,17 @@ All the `ScrollView`/`ListView` props will be passed.
 |----------|----------|-----------------|
 | `viewIsInsideTabBar` | `boolean` | Adds an extra offset that represents the `TabBarIOS` height. |
 | `resetScrollToCoords` | `Object: {x: number, y: number}` | Coordinates that will be used to reset the scroll when the keyboard hides. |
-| `enableAutoAutomaticScroll` | `boolean` | When focus in TextInput will scroll the position, default is enabled. |
+| `enableAutoAutomaticScroll` | `boolean` | When focus in `TextInput` will scroll the position, default is enabled. |
+| `extraHeight` | `number` | Adds an extra offset when focusing the `TextInput`s. |
+| `extraScrollHeight` | `number` | Adds an extra offset to the keyboard. Useful if you want to stick elements above the keyboard. |
+| `enableResetScrollToCoords` | `boolean` | Lets the user enable or disable automatic resetScrollToCoords. |
 | `keyboardOpeningTime` | `number` | Sets the delay time before scrolling to new position, default is 250 |
-| `extraHeight` | `number` | Adds an extra offset |
+
+| **Method** | **Parameter** | **Description** |
+|------------|---------------|-----------------|
+| `getScrollResponder` | `void` | Get `ScrollResponder` |
+| `scrollToPosition` | `x: number, y: number, animated: bool = true` | Scroll to specific position with or without animation. |
+| `scrollToEnd` | `animated?: bool = true` | Scroll to end with or without animation. |
 
 ## License
 
