@@ -4,7 +4,7 @@
 // TypeScript Version: 2.3.2
 
 import React from 'react'
-import { ScrollViewStatic, ListViewStatic } from 'react-native'
+import { ScrollViewProperties, ListViewProperties } from 'react-native'
 
 interface KeyboardAwareProps {
     /**
@@ -68,8 +68,8 @@ interface KeyboardAwareProps {
     extraScrollHeight?: number
 }
 
-interface KeyboardAwareListViewProps extends KeyboardAwareProps, ListViewStatic {}
-interface KeyboardAwareScrollViewProps extends KeyboardAwareProps, ScrollViewStatic {}
+interface KeyboardAwareListViewProps extends KeyboardAwareProps, ListViewProperties {}
+interface KeyboardAwareScrollViewProps extends KeyboardAwareProps, ScrollViewProperties {}
 
 export class KeyboardAwareMixin {}
 export class KeyboardAwareListView extends React.Component<KeyboardAwareListViewProps, null> { }
