@@ -3,6 +3,7 @@
   "version": "0.2.8",
   "description": "A React Native ScrollView component that resizes when the keyboard appears.",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "lint": "eslint lib",
     "test": "npm run lint",
