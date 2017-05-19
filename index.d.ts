@@ -6,10 +6,10 @@
 import React from 'react'
 import { ScrollViewProperties, ListViewProperties } from 'react-native'
 
-interface KeyboardAwareProps {
+interface KeyboardAwareProps extends React.HTMLProps<any> {
     /**
      * Adds an extra offset that represents the TabBarIOS height.
-     * 
+     *
      * @type {boolean}
      * @memberof KeyboardAwareProps
      */
@@ -17,7 +17,7 @@ interface KeyboardAwareProps {
 
     /**
      * Coordinates that will be used to reset the scroll when the keyboard hides.
-     * 
+     *
      * @type {{
      *         x: number,
      *         y: number
@@ -31,7 +31,7 @@ interface KeyboardAwareProps {
 
     /**
      * Lets the user enable or disable automatic resetScrollToCoords
-     * 
+     *
      * @type {boolean}
      * @memberof KeyboardAwareProps
      */
@@ -39,9 +39,9 @@ interface KeyboardAwareProps {
 
     /**
      * When focus in TextInput will scroll the position
-     * 
+     *
      * Default is true
-     * 
+     *
      * @type {boolean}
      * @memberof KeyboardAwareProps
      */
@@ -57,20 +57,20 @@ interface KeyboardAwareProps {
     extraHeight?: number
 
     /**
-     * Adds an extra offset to the keyboard. 
+     * Adds an extra offset to the keyboard.
      * Useful if you want to stick elements above the keyboard.
-     * 
+     *
      * Default is 0
-     * 
+     *
      * @type {number}
      * @memberof KeyboardAwareProps
      */
     extraScrollHeight?: number
 }
 
-interface KeyboardAwareListViewProps extends KeyboardAwareProps, ListViewProperties {}
-interface KeyboardAwareScrollViewProps extends KeyboardAwareProps, ScrollViewProperties {}
+interface KeyboardAwareListViewProps extends KeyboardAwareProps, ListViewProperties { }
+interface KeyboardAwareScrollViewProps extends KeyboardAwareProps, ScrollViewProperties { }
 
-export class KeyboardAwareMixin {}
+export class KeyboardAwareMixin { }
 export class KeyboardAwareListView extends React.Component<KeyboardAwareListViewProps, null> { }
 export class KeyboardAwareScrollView extends React.Component<KeyboardAwareScrollViewProps, null> { }
