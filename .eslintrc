@@ -14,7 +14,12 @@
   },
 
   "plugins": [
-    "react"
+    "react",
+    "flowtype"
+  ],
+
+  "extends": [
+    "plugin:flowtype/recommended"
   ],
 
   "globals": {

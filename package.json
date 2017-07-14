@@ -36,13 +36,14 @@
   },
   "homepage": "https://github.com/APSL/react-native-keyboard-aware-scroll-view#readme",
   "dependencies": {
-    "react-timer-mixin": "^0.13.3",
-    "prop-types": "^15.5.10"
+    "prop-types": "^15.5.10",
+    "react-timer-mixin": "^0.13.3"
   },
   "devDependencies": {
     "babel-eslint": "^6.0.4",
     "eslint": "^3.17.1",
-    "eslint-plugin-react": "^6.10.0",
+    "eslint-plugin-flowtype": "^2.35.0",
+    "eslint-plugin-react": "^7.1.0",
     "flow-bin": "0.47.0"
   }
 }
