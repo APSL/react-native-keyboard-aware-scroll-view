@@ -53,9 +53,9 @@ As of `v0.1.0`, the component auto scrolls to the focused `TextInput` 😎. For 
 In order to scroll to any `TextInput` field, you can use the built-in method `scrollToFocusedInput`. Example:
 
 ```js
-_scrollToInput (reactNode: any) {
+_scrollToInput (event, reactNode: any) {
   // Add a 'scroll' ref to your ScrollView
-  this.refs.scroll.scrollToFocusedInput(reactNode)
+  this.refs.scroll.scrollToFocusedInput(event, reactNode)
 }
 ```
 
@@ -64,7 +64,7 @@ _scrollToInput (reactNode: any) {
   <View>
     <TextInput onFocus={(event: Event) => {
       // `bind` the function if you're using ES6 classes
-      this._scrollToInput(ReactNative.findNodeHandle(event.target))
+      this._scrollToInput(event, ReactNative.findNodeHandle(event.target))
     }/>
   </View>
 </KeyboardAwareScrollView>
