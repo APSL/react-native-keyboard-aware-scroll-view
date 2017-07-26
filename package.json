@@ -36,6 +36,7 @@
   },
   "homepage": "https://github.com/APSL/react-native-keyboard-aware-scroll-view#readme",
   "dependencies": {
+    "create-react-class": "^15.6.0",
     "prop-types": "^15.5.10",
     "react-timer-mixin": "^0.13.3"
   },
