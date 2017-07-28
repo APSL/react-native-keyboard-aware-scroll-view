@@ -91,6 +91,28 @@ You can register to `ScrollViewResponder` events `onKeyboardWillShow` and `onKey
 </KeyboardAwareScrollView>
 ```
 
+## Android Support
+First, Android natively has this feature, you can easily enable it by setting `windowSoftInputMode` in `AndroidManifest.xml`. Check [here](https://developer.android.com/guide/topics/manifest/activity-element.html#wsoft).
+
+But if you want to use feature like `extraHeight`, you need to enable Android Support with the following steps:
+
+- Make sure you are using react-native `0.46` or above.
+- Set `windowSoftInputMode` to `adjustPan` in `AndroidManifest.xml`.
+- Set `enableOnAndroid` property to `true`.
+
+Android Suppor is not perfect, here is the support list:
+
+| **Prop** | **Android Support** |
+|----------|-----------------|
+| `viewIsInsideTabBar` | Yes |
+| `resetScrollToCoords` | Yes |
+| `enableAutoAutomaticScroll` | Yes |
+| `extraHeight` | Yes |
+| `extraScrollHeight` | Yes |
+| `enableResetScrollToCoords` | Yes |
+| `keyboardOpeningTime` | No |
+
+
 ## API
 ### Props
 All the `ScrollView`/`ListView` props will be passed.
@@ -104,6 +126,7 @@ All the `ScrollView`/`ListView` props will be passed.
 | `extraScrollHeight` | `number` | Adds an extra offset to the keyboard. Useful if you want to stick elements above the keyboard. |
 | `enableResetScrollToCoords` | `boolean` | Lets the user enable or disable automatic resetScrollToCoords. |
 | `keyboardOpeningTime` | `number` | Sets the delay time before scrolling to new position, default is 250 |
+| `enableOnAndroid` | `boolean` | Enable Android Support |
 
 | **Method** | **Parameter** | **Description** |
 |------------|---------------|-----------------|
