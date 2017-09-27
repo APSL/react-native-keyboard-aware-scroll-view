@@ -66,6 +66,16 @@ interface KeyboardAwareProps {
      * @memberof KeyboardAwareProps
      */
     extraScrollHeight?: number
+
+    /**
+     * Sets the delay time before scrolling to new position
+     *
+     * Default is 250
+     *
+     * @type {number}
+     * @memberof KeyboardAwareProps
+     */
+    keyboardOpeningTime?: number
 }
 
 interface KeyboardAwareListViewProps extends KeyboardAwareProps, ListViewProperties {}
