@@ -13,7 +13,7 @@ A ScrollView component that handles keyboard appearance and automatically scroll
 </p>
 
 ## Supported versions
-- `v0.3.0` requires `RN>=0.48`
+- `v0.4.0` requires `RN>=0.48`
 - `v0.2.0` requires `RN>=0.32.0`.
 - `v0.1.2` requires `RN>=0.27.2` but you should use `0.2.0` in order to make it work with multiple scroll views.
 - `v0.0.7` requires `react-native>=0.25.0`.
@@ -85,7 +85,7 @@ this.scroll.props.scrollToPosition(0, 0)
 ## Register to keyboard events
 You can register to `ScrollViewResponder` events `onKeyboardWillShow` and `onKeyboardWillHide`:
 
-```js
+```jsx
 <KeyboardAwareScrollView
   onKeyboardWillShow={(frames: Object) => {
     console.log('Keyboard event', frames)
