@@ -1,7 +1,8 @@
 {
   "name": "react-native-keyboard-aware-scroll-view",
-  "version": "0.3.0",
-  "description": "A React Native ScrollView component that resizes when the keyboard appears.",
+  "version": "0.4.0",
+  "description":
+    "A React Native ScrollView component that resizes when the keyboard appears.",
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
@@ -11,15 +12,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/APSL/react-native-keyboard-aware-scroll-view.git"
+    "url":
+      "git+https://github.com/APSL/react-native-keyboard-aware-scroll-view.git"
   },
-  "tags": [
-    "react",
-    "react-native",
-    "react-component",
-    "ios",
-    "android"
-  ],
+  "tags": ["react", "react-native", "react-component", "ios", "android"],
   "keywords": [
     "react",
     "react-native",
@@ -32,9 +28,11 @@
   "author": "Alvaro Medina Ballester <me@alvaromb.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/APSL/react-native-keyboard-aware-scroll-view/issues"
+    "url":
+      "https://github.com/APSL/react-native-keyboard-aware-scroll-view/issues"
   },
-  "homepage": "https://github.com/APSL/react-native-keyboard-aware-scroll-view#readme",
+  "homepage":
+    "https://github.com/APSL/react-native-keyboard-aware-scroll-view#readme",
   "dependencies": {
     "@types/create-react-class": "^15.6.0",
     "prop-types": "^15.6.0",
