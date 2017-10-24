@@ -70,7 +70,7 @@ _scrollToInput (reactNode: any) {
     <TextInput onFocus={(event: Event) => {
       // `bind` the function if you're using ES6 classes
       this._scrollToInput(ReactNative.findNodeHandle(event.target))
-    } />
+    }} />
   </View>
 </KeyboardAwareScrollView>
 ```
