@@ -47,6 +47,16 @@ interface KeyboardAwareProps {
      * @memberof KeyboardAwareProps
      */
   enableAutoAutomaticScroll?: boolean
+  
+    /**
+     * Enables keyboard aware settings for Android
+     *
+     * Default is false
+     *
+     * @type {boolean}
+     * @memberof KeyboardAwareProps
+     */
+  enableOnAndroid?: boolean
 
   /**
      * Adds an extra offset when focusing the TextInputs.
