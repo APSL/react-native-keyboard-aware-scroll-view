@@ -36,8 +36,7 @@
   "dependencies": {
     "prop-types": "^15.6.0",
     "react-native": "^0.48.4",
-    "react-native-iphone-x-helper": "^1.0.1",
-    "react-timer-mixin": "^0.13.3"
+    "react-native-iphone-x-helper": "^1.0.1"
   },
   "devDependencies": {
     "@types/react-native": "^0.48.9",
