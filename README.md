@@ -60,7 +60,7 @@ In order to scroll to any `TextInput` field, you can use the built-in method `sc
 ```js
 _scrollToInput (reactNode: any) {
   // Add a 'scroll' ref to your ScrollView
-  this.scroll.props.scrollToFocusedInput(reactNode)
+  this.scroll.scrollToFocusedInput(reactNode)
 }
 ```
 
