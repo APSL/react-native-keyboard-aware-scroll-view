@@ -111,7 +111,7 @@ Android Support is not perfect, here is the supported list:
 |----------|-----------------|
 | `viewIsInsideTabBar` | Yes |
 | `resetScrollToCoords` | Yes |
-| `enableAutoAutomaticScroll` | Yes |
+| `enableAutomaticScroll` | Yes |
 | `extraHeight` | Yes |
 | `extraScrollHeight` | Yes |
 | `enableResetScrollToCoords` | Yes |
@@ -127,7 +127,7 @@ All the `ScrollView`/`ListView`/`FlatList` props will be passed.
 | `innerRef` | `Function` | Catch the reference of the component. |
 | `viewIsInsideTabBar` | `boolean` | Adds an extra offset that represents the `TabBarIOS` height. |
 | `resetScrollToCoords` | `Object: {x: number, y: number}` | Coordinates that will be used to reset the scroll when the keyboard hides. |
-| `enableAutoAutomaticScroll` | `boolean` | When focus in `TextInput` will scroll the position, default is enabled. |
+| `enableAutomaticScroll` | `boolean` | When focus in `TextInput` will scroll the position, default is enabled. |
 | `extraHeight` | `number` | Adds an extra offset when focusing the `TextInput`s. |
 | `extraScrollHeight` | `number` | Adds an extra offset to the keyboard. Useful if you want to stick elements above the keyboard. |
 | `enableResetScrollToCoords` | `boolean` | Lets the user enable or disable automatic resetScrollToCoords. |

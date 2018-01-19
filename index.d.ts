@@ -46,8 +46,8 @@ interface KeyboardAwareProps {
      * @type {boolean}
      * @memberof KeyboardAwareProps
      */
-  enableAutoAutomaticScroll?: boolean
-
+  
+  enableAutomaticScroll?: boolean
     /**
      * Enables keyboard aware settings for Android
      *
