@@ -142,6 +142,7 @@ Use `innerRef` to get the component reference and use `this.scrollRef.props` to 
 | `getScrollResponder` | `void` | Get `ScrollResponder` |
 | `scrollToPosition` | `x: number, y: number, animated: bool = true` | Scroll to specific position with or without animation. |
 | `scrollToEnd` | `animated?: bool = true` | Scroll to end with or without animation. |
+| `scrollIntoView` | `element: React.Element<*>, options: { getScrollPosition: ?(parentLayout, childLayout, contentOffset) => { x: number, y: number, animated: boolean } }` | Scrolls an element inside a KeyboardAwareScrollView into view. |
 
 ### Using high order component
 Enabling any component to be keyboard-aware is very easy. Take a look at the code of `KeyboardAwareListView`:
