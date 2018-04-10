@@ -4,7 +4,7 @@
 // TypeScript Version: 2.3.2
 
 import * as React from 'react'
-import { ScrollViewProperties, ListViewProperties, FlatListProperties } from 'react-native'
+import { ScrollViewProperties, ListViewProperties, FlatListProperties, SectionListProperties } from 'react-native'
 
 interface KeyboardAwareProps {
   /**
@@ -98,21 +98,40 @@ interface KeyboardAwareScrollViewProps
 interface KeyboardAwareFlatListProps<ItemT>
   extends KeyboardAwareProps,
     FlatListProperties<ItemT> {}
+interface KeyboardAwareSectionListProps<ItemT>
+  extends KeyboardAwareProps,
+    SectionListProperties<ItemT> {}
 
 interface KeyboardAwareState {
   keyboardSpace: number
 }
 
+declare class ScrollableComponent<P, S> extends React.Component<P, S> {
+  getScrollResponder: () => void;
+  scrollToPosition: (x: number, y: number, animated?: boolean) => void;
+  scrollToEnd: (animated?: boolean) => void;
+  scrollForExtraHeightOnAndroid: (extraHeight: number) => void;
+  scrollToFocusedInput: (
+    reactNode: Object,
+    extraHeight: number,
+    keyboardOpeningTime: number
+  ) => void
+}
+
 export class KeyboardAwareMixin {}
-export class KeyboardAwareListView extends React.Component<
+export class KeyboardAwareListView extends ScrollableComponent<
   KeyboardAwareListViewProps,
   KeyboardAwareState
-> {}
-export class KeyboardAwareScrollView extends React.Component<
+  > {}
+export class KeyboardAwareScrollView extends ScrollableComponent<
   KeyboardAwareScrollViewProps,
   KeyboardAwareState
-> {}
-export class KeyboardAwareFlatList extends React.Component<
-KeyboardAwareFlatListProps<any>,
-KeyboardAwareState
-> {}
+  > {}
+export class KeyboardAwareFlatList extends ScrollableComponent<
+  KeyboardAwareFlatListProps<any>,
+  KeyboardAwareState
+  > {}
+export class KeyboardAwareSectionList extends ScrollableComponent<
+  KeyboardAwareSectionListProps<any>,
+  KeyboardAwareState
+  > {}
