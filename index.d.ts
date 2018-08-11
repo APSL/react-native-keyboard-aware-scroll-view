@@ -113,8 +113,8 @@ declare class ScrollableComponent<P, S> extends React.Component<P, S> {
   scrollForExtraHeightOnAndroid: (extraHeight: number) => void;
   scrollToFocusedInput: (
     reactNode: Object,
-    extraHeight: number,
-    keyboardOpeningTime: number
+    extraHeight?: number,
+    keyboardOpeningTime?: number
   ) => void
 }
 
