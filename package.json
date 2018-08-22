@@ -1,8 +1,7 @@
 {
   "name": "react-native-keyboard-aware-scroll-view",
   "version": "0.7.0",
-  "description":
-    "A React Native ScrollView component that resizes when the keyboard appears.",
+  "description": "A React Native ScrollView component that resizes when the keyboard appears.",
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
@@ -12,10 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url":
-      "git+https://github.com/APSL/react-native-keyboard-aware-scroll-view.git"
+    "url": "git+https://github.com/APSL/react-native-keyboard-aware-scroll-view.git"
   },
-  "tags": ["react", "react-native", "react-component", "ios", "android"],
+  "tags": [
+    "react",
+    "react-native",
+    "react-component",
+    "ios",
+    "android"
+  ],
   "keywords": [
     "react",
     "react-native",
@@ -28,26 +32,23 @@
   "author": "Alvaro Medina Ballester <me@alvaromb.com>",
   "license": "MIT",
   "bugs": {
-    "url":
-      "https://github.com/APSL/react-native-keyboard-aware-scroll-view/issues"
+    "url": "https://github.com/APSL/react-native-keyboard-aware-scroll-view/issues"
   },
-  "homepage":
-    "https://github.com/APSL/react-native-keyboard-aware-scroll-view#readme",
+  "homepage": "https://github.com/APSL/react-native-keyboard-aware-scroll-view#readme",
   "dependencies": {
-    "prop-types": "^15.6.0",
-    "react-native-iphone-x-helper": "^1.0.1"
+    "prop-types": "^15.6.2",
+    "react-native-iphone-x-helper": "^1.0.3"
   },
   "peerDependencies": {
     "react-native": ">=0.48.4"
   },
   "devDependencies": {
-    "babel-eslint": "^8.0.1",
-    "babel-preset-react-native": "^4.0.0",
-    "eslint": "^4.7.2",
-    "eslint-plugin-flowtype": "^2.36.0",
-    "eslint-plugin-react": "^7.4.0",
-    "eslint-plugin-react-native": "^3.1.0",
+    "babel-eslint": "^8.2.6",
+    "eslint": "^5.4.0",
+    "eslint-plugin-flowtype": "^2.50.0",
+    "eslint-plugin-react": "^7.11.1",
+    "eslint-plugin-react-native": "^3.2.1",
     "flow": "^0.2.3",
-    "flow-bin": "0.47.0"
+    "flow-bin": "^0.79.1"
   }
 }
