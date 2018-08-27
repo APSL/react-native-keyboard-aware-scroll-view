@@ -8,6 +8,14 @@ import { ScrollViewProperties, ListViewProperties, FlatListProperties, SectionLi
 
 interface KeyboardAwareProps {
   /**
+     * Catches the reference of the component.
+     *
+     *
+     * @type {function}
+     * @memberof KeyboardAwareProps
+     */
+  innerRef?: (ref: JSX.Element) => void
+  /**
      * Adds an extra offset that represents the TabBarIOS height.
      *
      * Default is false
