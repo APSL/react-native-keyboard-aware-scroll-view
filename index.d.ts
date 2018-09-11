@@ -95,6 +95,48 @@ interface KeyboardAwareProps {
      * @memberof KeyboardAwareProps
      */
   keyboardOpeningTime?: number
+
+  /**
+     * Callback when the keyboard will show.
+     * 
+     * @param frames Information about the keyboard frame and animation.
+     */
+  onKeyboardWillShow?: (frames: Object) => void
+
+  /**
+     * Callback when the keyboard did show.
+     * 
+     * @param frames Information about the keyboard frame and animation.
+     */
+  onKeyboardDidShow?: (frames: Object) => void
+
+  /**
+     * Callback when the keyboard will hide.
+     * 
+     * @param frames Information about the keyboard frame and animation.
+     */
+  onKeyboardWillHide?: (frames: Object) => void
+
+  /**
+     * Callback when the keyboard did hide.
+     * 
+     * @param frames Information about the keyboard frame and animation.
+     */
+  onKeyboardDidHide?: (frames: Object) => void
+
+  /**
+     * Callback when the keyboard frame will change.
+     * 
+     * @param frames Information about the keyboard frame and animation.
+     */
+  onKeyboardWillChangeFrame?: (frames: Object) => void
+
+  /**
+     * Callback when the keyboard frame did change.
+     * 
+     * @param frames Information about the keyboard frame and animation.
+     */
+  onKeyboardDidChangeFrame?: (frames: Object) => void
 }
 
 interface KeyboardAwareListViewProps
