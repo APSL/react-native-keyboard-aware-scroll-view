@@ -8,6 +8,14 @@ import { ScrollViewProperties, ListViewProperties, FlatListProperties, SectionLi
 
 interface KeyboardAwareProps {
   /**
+     * Catches the reference of the component.
+     *
+     *
+     * @type {function}
+     * @memberof KeyboardAwareProps
+     */
+  innerRef?: (ref: JSX.Element) => void
+  /**
      * Adds an extra offset that represents the TabBarIOS height.
      *
      * Default is false
@@ -87,6 +95,48 @@ interface KeyboardAwareProps {
      * @memberof KeyboardAwareProps
      */
   keyboardOpeningTime?: number
+
+  /**
+     * Callback when the keyboard will show.
+     * 
+     * @param frames Information about the keyboard frame and animation.
+     */
+  onKeyboardWillShow?: (frames: Object) => void
+
+  /**
+     * Callback when the keyboard did show.
+     * 
+     * @param frames Information about the keyboard frame and animation.
+     */
+  onKeyboardDidShow?: (frames: Object) => void
+
+  /**
+     * Callback when the keyboard will hide.
+     * 
+     * @param frames Information about the keyboard frame and animation.
+     */
+  onKeyboardWillHide?: (frames: Object) => void
+
+  /**
+     * Callback when the keyboard did hide.
+     * 
+     * @param frames Information about the keyboard frame and animation.
+     */
+  onKeyboardDidHide?: (frames: Object) => void
+
+  /**
+     * Callback when the keyboard frame will change.
+     * 
+     * @param frames Information about the keyboard frame and animation.
+     */
+  onKeyboardWillChangeFrame?: (frames: Object) => void
+
+  /**
+     * Callback when the keyboard frame did change.
+     * 
+     * @param frames Information about the keyboard frame and animation.
+     */
+  onKeyboardDidChangeFrame?: (frames: Object) => void
 }
 
 interface KeyboardAwareListViewProps
@@ -113,8 +163,8 @@ declare class ScrollableComponent<P, S> extends React.Component<P, S> {
   scrollForExtraHeightOnAndroid: (extraHeight: number) => void;
   scrollToFocusedInput: (
     reactNode: Object,
-    extraHeight: number,
-    keyboardOpeningTime: number
+    extraHeight?: number,
+    keyboardOpeningTime?: number
   ) => void
 }
 

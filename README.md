@@ -60,7 +60,7 @@ In order to scroll to any `TextInput` field, you can use the built-in method `sc
 ```js
 _scrollToInput (reactNode: any) {
   // Add a 'scroll' ref to your ScrollView
-  this.scroll.scrollToFocusedInput(reactNode)
+  this.scroll.props.scrollToFocusedInput(reactNode)
 }
 ```
 
@@ -155,6 +155,40 @@ import listenToKeyboardEvents from './KeyboardAwareHOC'
 
 export default listenToKeyboardEvents(ListView)
 ```
+
+The HOC can also be configured. Sometimes it's more convenient to provide a static config than configuring the behavior with props. This HOC config can be overriden with props.
+
+```js
+/* @flow */
+
+import { ListView } from 'react-native'
+import listenToKeyboardEvents from './KeyboardAwareHOC'
+
+const config = {
+  enableOnAndroid: true,
+  enableAutomaticScroll: true,
+};
+
+export default listenToKeyboardEvents(config)(ListView)
+```
+
+The available config options are:
+
+```js
+{
+  enableOnAndroid: boolean,
+  contentContainerStyle: ?Object,
+  enableAutomaticScroll: boolean,
+  extraHeight: number,
+  extraScrollHeight: number,
+  enableResetScrollToCoords: boolean,
+  keyboardOpeningTime: number,
+  viewIsInsideTabBar: boolean,
+  refPropName: string,
+  extractNativeRef: Function
+}
+```
+
 
 ## License
 
