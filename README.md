@@ -127,6 +127,7 @@ Android Support is not perfect, here is the supported list:
 | `enableAutomaticScroll`     | Yes                 |
 | `extraHeight`               | Yes                 |
 | `extraScrollHeight`         | Yes                 |
+| `extraBottomInset`          | Yes                 |
 | `enableResetScrollToCoords` | Yes                 |
 | `keyboardOpeningTime`       | No                  |
 
@@ -144,6 +145,7 @@ All the `ScrollView`/`FlatList` props will be passed.
 | `enableAutomaticScroll`     | `boolean`                        | When focus in `TextInput` will scroll the position, default is enabled.                        |
 | `extraHeight`               | `number`                         | Adds an extra offset when focusing the `TextInput`s.                                           |
 | `extraScrollHeight`         | `number`                         | Adds an extra offset to the keyboard. Useful if you want to stick elements above the keyboard. |
+| `extraBottomInset`          | `number`                         | Adds an extra bottom inset to the scrollable content when keyboard is open.                    |
 | `enableResetScrollToCoords` | `boolean`                        | Lets the user enable or disable automatic resetScrollToCoords.                                 |
 | `keyboardOpeningTime`       | `number`                         | Sets the delay time before scrolling to new position, default is 250                           |
 | `enableOnAndroid`           | `boolean`                        | Enable Android Support                                                                         |
