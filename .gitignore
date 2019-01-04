@@ -3,7 +3,7 @@ node_modules
 AwesomeProject.xcodeproj
 AwesomeProjectTests
 index.ios.js
-iOS
+xcuserdata
 
 .idea/
 .vscode/
