@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.license         = "MIT"
   s.author          = "WordPress Mobile Gutenberg Team"
   s.platform        = :ios, "8.0"
-  s.source          = { :git => "https://github.com/wordpress-mobile/react-native-keyboard-aware-scroll-view.git", :tag => s.version.to_s }
+  s.source          = { :git => "https://github.com/wordpress-mobile/react-native-keyboard-aware-scroll-view.git", :tag => "gb-v" + s.version.to_s }
   s.source_files    = "ios/RNKeyboardAwareScrollView/*.{h,m}"
   s.preserve_paths  = "**/*.js"
 
