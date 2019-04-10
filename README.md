@@ -36,7 +36,7 @@ yarn add react-native-keyboard-aware-scroll-view
 
 You can use the `KeyboardAwareScrollView`, `KeyboardAwareSectionList` or the `KeyboardAwareFlatList`
 components. They accept `ScrollView`, `SectionList` and `FlatList` default props respectively and
-implement a custom high order componente called `KeyboardAwareHOC` to handle keyboard appearance.
+implement a custom high order component called `KeyboardAwareHOC` to handle keyboard appearance.
 The high order component is also available if you want to use it in any other component.
 
 Import `react-native-keyboard-aware-scroll-view` and wrap your content inside
