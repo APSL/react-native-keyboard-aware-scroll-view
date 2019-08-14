@@ -5,9 +5,9 @@
 
 import * as React from 'react'
 import {
-  ScrollViewProperties,
-  FlatListProperties,
-  SectionListProperties
+  ScrollViewProps,
+  FlatListProps,
+  SectionListProps
 } from 'react-native'
 
 interface KeyboardAwareProps {
@@ -145,13 +145,13 @@ interface KeyboardAwareProps {
 
 interface KeyboardAwareScrollViewProps
   extends KeyboardAwareProps,
-    ScrollViewProperties {}
+    ScrollViewProps {}
 interface KeyboardAwareFlatListProps<ItemT>
   extends KeyboardAwareProps,
-    FlatListProperties<ItemT> {}
+    FlatListProps<ItemT> {}
 interface KeyboardAwareSectionListProps<ItemT>
   extends KeyboardAwareProps,
-    SectionListProperties<ItemT> {}
+    SectionListProps<ItemT> {}
 
 interface KeyboardAwareState {
   keyboardSpace: number
