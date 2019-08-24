@@ -10,23 +10,6 @@ import {
   SectionListProps
 } from 'react-native'
 
-export type ScrollPosition = {
-  x: number,
-  y: number,
-  animated: boolean
-}
-
-export type ElementLayout = {
-  x: number,
-  y: number,
-  width: number,
-  height: number
-}
-
-export type ContentOffset = {
-  x: number,
-  y: number
-}
 
 interface KeyboardAwareProps {
   /**
@@ -160,13 +143,7 @@ interface KeyboardAwareProps {
    */
   onKeyboardDidChangeFrame?: (frames: Object) => void
 }
-export type ScrollIntoViewOptions = {
-  getScrollPosition?: (
-    parentLayout: ElementLayout,
-    childLayout: ElementLayout,
-    contentOffset: ContentOffset
-  ) => ScrollPosition
-}
+
 interface KeyboardAwareScrollViewProps
   extends KeyboardAwareProps,
   ScrollViewProps {}
