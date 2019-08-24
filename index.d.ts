@@ -1,7 +1,7 @@
 // Type definitions for react-native-keyboard-aware-scroll-view
 // Project: https://github.com/APSL/react-native-keyboard-aware-scroll-view
 // Definitions by: Kyle Roach <https://github.com/iRoachie>
-// TypeScript Version: 2.3.2
+// TypeScript Version: 2.3.3
 
 import * as React from 'react'
 import {
