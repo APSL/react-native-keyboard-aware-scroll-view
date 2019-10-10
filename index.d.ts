@@ -174,11 +174,11 @@ export class KeyboardAwareScrollView extends ScrollableComponent<
   KeyboardAwareScrollViewProps,
   KeyboardAwareState
 > {}
-export class KeyboardAwareFlatList extends ScrollableComponent<
-  KeyboardAwareFlatListProps<any>,
+export class KeyboardAwareFlatList<ItemT> extends ScrollableComponent<
+  KeyboardAwareFlatListProps<ItemT>,
   KeyboardAwareState
 > {}
-export class KeyboardAwareSectionList extends ScrollableComponent<
-  KeyboardAwareSectionListProps<any>,
+export class KeyboardAwareSectionList<ItemT> extends ScrollableComponent<
+  KeyboardAwareSectionListProps<ItemT>,
   KeyboardAwareState
 > {}
