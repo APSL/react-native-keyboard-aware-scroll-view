@@ -125,7 +125,7 @@ Android Support is not perfect, here is the supported list:
 | `viewIsInsideTabBar`        | Yes                 |
 | `resetScrollToCoords`       | Yes                 |
 | `enableAutomaticScroll`     | Yes                 |
-| `enableContentInset`        | Yes                 |
+| `insetOnly`                 | Yes                 |
 | `extraHeight`               | Yes                 |
 | `extraScrollHeight`         | Yes                 |
 | `enableResetScrollToCoords` | Yes                 |
