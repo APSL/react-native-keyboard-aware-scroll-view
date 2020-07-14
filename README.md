@@ -125,6 +125,7 @@ Android Support is not perfect, here is the supported list:
 | `viewIsInsideTabBar`        | Yes                 |
 | `resetScrollToCoords`       | Yes                 |
 | `enableAutomaticScroll`     | Yes                 |
+| `insetOnly`                 | Yes                 |
 | `extraHeight`               | Yes                 |
 | `extraScrollHeight`         | Yes                 |
 | `enableResetScrollToCoords` | Yes                 |
@@ -136,17 +137,18 @@ Android Support is not perfect, here is the supported list:
 
 All the `ScrollView`/`FlatList` props will be passed.
 
-| **Prop**                    | **Type**                         | **Description**                                                                                |
-| --------------------------- | -------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `innerRef`                  | `Function`                       | Catch the reference of the component.                                                          |
-| `viewIsInsideTabBar`        | `boolean`                        | Adds an extra offset that represents the `TabBarIOS` height.                                   |
-| `resetScrollToCoords`       | `Object: {x: number, y: number}` | Coordinates that will be used to reset the scroll when the keyboard hides.                     |
-| `enableAutomaticScroll`     | `boolean`                        | When focus in `TextInput` will scroll the position, default is enabled.                        |
-| `extraHeight`               | `number`                         | Adds an extra offset when focusing the `TextInput`s.                                           |
-| `extraScrollHeight`         | `number`                         | Adds an extra offset to the keyboard. Useful if you want to stick elements above the keyboard. |
-| `enableResetScrollToCoords` | `boolean`                        | Lets the user enable or disable automatic resetScrollToCoords.                                 |
-| `keyboardOpeningTime`       | `number`                         | Sets the delay time before scrolling to new position, default is 250                           |
-| `enableOnAndroid`           | `boolean`                        | Enable Android Support                                                                         |
+| **Prop**                    | **Type**                         | **Description**                                                                                                                                                   |
+| --------------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `innerRef`                  | `Function`                       | Catch the reference of the component.                                                                                                                             |
+| `viewIsInsideTabBar`        | `boolean`                        | Adds an extra offset that represents the `TabBarIOS` height.                                                                                                      |
+| `resetScrollToCoords`       | `Object: {x: number, y: number}` | Coordinates that will be used to reset the scroll when the keyboard hides.                                                                                        |
+| `enableAutomaticScroll`     | `boolean`                        | When focus in `TextInput` will scroll the position, default is enabled.                                                                                           |
+| `insetOnly`                 | `boolean`                        | Only adds content inset for the keyboard and disables autoScroll. iOS will fit TextInput to the screen if it was visible before keyboard open. Default is false.  |
+| `extraHeight`               | `number`                         | Adds an extra offset when focusing the `TextInput`s.                                                                                                              |
+| `extraScrollHeight`         | `number`                         | Adds an extra offset to the keyboard. Useful if you want to stick elements above the keyboard.                                                                    |
+| `enableResetScrollToCoords` | `boolean`                        | Lets the user enable or disable automatic resetScrollToCoords.                                                                                                    |
+| `keyboardOpeningTime`       | `number`                         | Sets the delay time before scrolling to new position, default is 250                                                                                              |
+| `enableOnAndroid`           | `boolean`                        | Enable Android Support                                                                                                                                            |
 
 ### Methods
 
