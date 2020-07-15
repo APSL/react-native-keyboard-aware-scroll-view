@@ -1,53 +1,53 @@
 {
-  "name": "react-native-keyboard-aware-scroll-view",
-  "version": "0.9.1",
-  "description": "A React Native ScrollView component that resizes when the keyboard appears.",
-  "main": "index.js",
-  "types": "index.d.ts",
-  "scripts": {
-    "lint": "eslint lib",
-    "test": "npm run lint",
-    "flow": "flow check"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/APSL/react-native-keyboard-aware-scroll-view.git"
-  },
-  "tags": [
-    "react",
-    "react-native",
-    "react-component",
-    "ios",
-    "android"
-  ],
-  "keywords": [
-    "react",
-    "react-native",
-    "scrollview",
-    "keyboard",
-    "ios",
-    "android",
-    "react-component"
-  ],
-  "author": "Alvaro Medina Ballester <me@alvaromb.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/APSL/react-native-keyboard-aware-scroll-view/issues"
-  },
-  "homepage": "https://github.com/APSL/react-native-keyboard-aware-scroll-view#readme",
-  "dependencies": {
-    "prop-types": "^15.6.2",
-    "react-native-iphone-x-helper": "^1.0.3"
-  },
-  "peerDependencies": {
-    "react-native": ">=0.48.4"
-  },
-  "devDependencies": {
-    "babel-eslint": "^10.0.2",
-    "eslint": "^6.1.0",
-    "eslint-plugin-flowtype": "^4.2.0",
-    "eslint-plugin-react": "^7.14.3",
-    "eslint-plugin-react-native": "^3.7.0",
-    "flow-bin": "^0.105.2"
-  }
+    "name": "react-native-keyboard-aware-scroll-view",
+    "version": "0.9.2",
+    "description": "A React Native ScrollView component that resizes when the keyboard appears.",
+    "main": "index.js",
+    "types": "index.d.ts",
+    "scripts": {
+        "lint": "eslint lib",
+        "test": "npm run lint",
+        "flow": "flow check"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/APSL/react-native-keyboard-aware-scroll-view.git"
+    },
+    "tags": [
+        "react",
+        "react-native",
+        "react-component",
+        "ios",
+        "android"
+    ],
+    "keywords": [
+        "react",
+        "react-native",
+        "scrollview",
+        "keyboard",
+        "ios",
+        "android",
+        "react-component"
+    ],
+    "author": "Alvaro Medina Ballester <me@alvaromb.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/APSL/react-native-keyboard-aware-scroll-view/issues"
+    },
+    "homepage": "https://github.com/APSL/react-native-keyboard-aware-scroll-view#readme",
+    "dependencies": {
+        "prop-types": "^15.6.2",
+        "react-native-iphone-x-helper": "^1.0.3"
+    },
+    "peerDependencies": {
+        "react-native": ">=0.48.4"
+    },
+    "devDependencies": {
+        "babel-eslint": "^10.0.2",
+        "eslint": "^6.1.0",
+        "eslint-plugin-flowtype": "^4.2.0",
+        "eslint-plugin-react": "^7.14.3",
+        "eslint-plugin-react-native": "^3.7.0",
+        "flow-bin": "^0.105.2"
+    }
 }
