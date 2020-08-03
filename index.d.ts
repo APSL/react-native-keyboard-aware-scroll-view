@@ -5,8 +5,8 @@
 
 import * as React from 'react'
 import {
-  ScrollViewProps,
-  FlatListProps,
+  FlatListProps, ScrollViewProps,
+
   SectionListProps
 } from 'react-native'
 
@@ -100,6 +100,8 @@ interface KeyboardAwareProps {
    */
   keyboardOpeningTime?: number
 
+  useKeyboardDistance?: boolean;
+
   /**
    * Callback when the keyboard will show.
    *
@@ -141,6 +143,11 @@ interface KeyboardAwareProps {
    * @param frames Information about the keyboard frame and animation.
    */
   onKeyboardDidChangeFrame?: (frames: Object) => void
+
+  /**
+   * Callback when the keyboard spacer height updates
+   */
+  onUpdate?: (spacerHeight: number) => void
 }
 
 interface KeyboardAwareScrollViewProps
