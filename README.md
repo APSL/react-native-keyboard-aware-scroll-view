@@ -150,7 +150,7 @@ All the `ScrollView`/`FlatList` props will be passed.
 
 ### Methods
 
-Use `innerRef` to get the component reference and use `this.scrollRef.props` to access these methods.
+Use `innerRef` to get the component reference and use `this.scrollRef` to access these methods.
 
 | **Method**           | **Parameter**                                                                                                                                           | **Description**                                                |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
