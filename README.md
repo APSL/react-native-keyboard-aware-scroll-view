@@ -43,7 +43,7 @@ Import `react-native-keyboard-aware-scroll-view` and wrap your content inside
 it:
 
 ```js
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 ```
 
 ```jsx
@@ -63,10 +63,17 @@ As of `v0.1.0`, the component auto scrolls to the focused `TextInput` 😎. For 
 In order to scroll to any `TextInput` field, you can use the built-in method `scrollToFocusedInput`. Example:
 
 ```js
+import { findNodeHandle } from 'react-native';
+```
+
+```js
 _scrollToInput (reactNode: any) {
   // Add a 'scroll' ref to your ScrollView
   this.scroll.props.scrollToFocusedInput(reactNode)
 }
+
+render() {
+...
 ```
 
 ```jsx
@@ -78,7 +85,7 @@ _scrollToInput (reactNode: any) {
     <TextInput
       onFocus={(event: Event) => {
         // `bind` the function if you're using ES6 classes
-        this._scrollToInput(ReactNative.findNodeHandle(event.target))
+        this._scrollToInput(findNodeHandle(event.target))
       }}
     />
   </View>
