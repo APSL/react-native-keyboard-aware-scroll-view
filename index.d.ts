@@ -182,3 +182,36 @@ export class KeyboardAwareSectionList extends ScrollableComponent<
   KeyboardAwareSectionListProps<any>,
   KeyboardAwareState
 > {}
+
+export type KeyboardAwareOptions = {
+  enableOnAndroid?: boolean;
+  contentContainerStyle?: {};
+  enableAutomaticScroll?: boolean;
+  extraHeight?: number;
+  extraScrollHeight?: number;
+  enableResetScrollToCoords?: boolean;
+  keyboardOpeningTime?: number;
+  viewIsInsideTabBar?: boolean;
+  refPropName?: string;
+  extractNativeRef?(ref: JSX.Element): JSX.Element;
+};
+
+export function listenToKeyboardEvents<P>(
+  options: KeyboardAwareOptions
+): (
+  Comp: React.ComponentType<P>
+) => {
+  new (props: P | KeyboardAwareProps): ScrollableComponent<
+    P | KeyboardAwareProps,
+    KeyboardAwareState
+  >;
+};
+
+export function listenToKeyboardEvents<P>(
+  Comp: React.ComponentType<P>
+): {
+  new (props: P | KeyboardAwareProps): ScrollableComponent<
+    P | KeyboardAwareProps,
+    KeyboardAwareState
+  >;
+};
