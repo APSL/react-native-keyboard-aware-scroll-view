@@ -7,10 +7,13 @@ import * as React from 'react'
 import {
   ScrollViewProps,
   FlatListProps,
-  SectionListProps
+  SectionListProps,
+  ScrollView,
+  FlatList,
+  SectionList
 } from 'react-native'
 
-interface KeyboardAwareProps {
+interface KeyboardAwareProps<E extends JSX.Element> {
   /**
    * Catches the reference of the component.
    *
@@ -18,7 +21,7 @@ interface KeyboardAwareProps {
    * @type {function}
    * @memberof KeyboardAwareProps
    */
-  innerRef?: (ref: JSX.Element) => void
+  innerRef?: (ref: E) => void
   /**
    * Adds an extra offset that represents the TabBarIOS height.
    *
@@ -144,13 +147,13 @@ interface KeyboardAwareProps {
 }
 
 interface KeyboardAwareScrollViewProps
-  extends KeyboardAwareProps,
+  extends KeyboardAwareProps<ScrollView>,
     ScrollViewProps {}
 interface KeyboardAwareFlatListProps<ItemT>
-  extends KeyboardAwareProps,
+  extends KeyboardAwareProps<FlatList>,
     FlatListProps<ItemT> {}
 interface KeyboardAwareSectionListProps<ItemT>
-  extends KeyboardAwareProps,
+  extends KeyboardAwareProps<SectionList>,
     SectionListProps<ItemT> {}
 
 interface KeyboardAwareState {
