@@ -147,6 +147,8 @@ All the `ScrollView`/`FlatList` props will be passed.
 | `enableResetScrollToCoords` | `boolean`                        | Lets the user enable or disable automatic resetScrollToCoords.                                 |
 | `keyboardOpeningTime`       | `number`                         | Sets the delay time before scrolling to new position, default is 250                           |
 | `enableOnAndroid`           | `boolean`                        | Enable Android Support                                                                         |
+| `tabBarHeight`              | `number`                         | tabBarHeight if viewIsInsideTabBar. Default isIphoneX screen 83 - normal is 49                 |
+
 
 ### Methods
 
@@ -201,7 +203,8 @@ The available config options are:
   keyboardOpeningTime: number,
   viewIsInsideTabBar: boolean,
   refPropName: string,
-  extractNativeRef: Function
+  extractNativeRef: Function,
+  tabBarHeight: number,
 }
 ```
 
