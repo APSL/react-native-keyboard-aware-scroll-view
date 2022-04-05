@@ -145,13 +145,13 @@ interface KeyboardAwareProps {
 
 interface KeyboardAwareScrollViewProps
   extends KeyboardAwareProps,
-    ScrollViewProps {}
+  ScrollViewProps { }
 interface KeyboardAwareFlatListProps<ItemT>
   extends KeyboardAwareProps,
-    FlatListProps<ItemT> {}
+  FlatListProps<ItemT> { }
 interface KeyboardAwareSectionListProps<ItemT>
   extends KeyboardAwareProps,
-    SectionListProps<ItemT> {}
+  SectionListProps<ItemT> { }
 
 interface KeyboardAwareState {
   keyboardSpace: number
@@ -167,18 +167,19 @@ declare class ScrollableComponent<P, S> extends React.Component<P, S> {
     extraHeight?: number,
     keyboardOpeningTime?: number
   ) => void
+  flashScrollIndicators: () => void
 }
 
-export class KeyboardAwareMixin {}
+export class KeyboardAwareMixin { }
 export class KeyboardAwareScrollView extends ScrollableComponent<
   KeyboardAwareScrollViewProps,
   KeyboardAwareState
-> {}
+> { }
 export class KeyboardAwareFlatList extends ScrollableComponent<
   KeyboardAwareFlatListProps<any>,
   KeyboardAwareState
-> {}
+> { }
 export class KeyboardAwareSectionList extends ScrollableComponent<
   KeyboardAwareSectionListProps<any>,
   KeyboardAwareState
-> {}
+> { }
