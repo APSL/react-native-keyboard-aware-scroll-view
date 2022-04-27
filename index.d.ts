@@ -7,7 +7,9 @@ import * as React from 'react'
 import {
   ScrollViewProps,
   FlatListProps,
-  SectionListProps
+  SectionListProps,
+  LayoutRectangle,
+  NativeScrollPoint
 } from 'react-native'
 
 interface KeyboardAwareProps {
@@ -166,6 +168,16 @@ declare class ScrollableComponent<P, S> extends React.Component<P, S> {
     reactNode: Object,
     extraHeight?: number,
     keyboardOpeningTime?: number
+  ) => void
+  scrollIntoView: (
+    element: React.ReactElement,
+    options?: {
+      getScrollPosition?: (
+        parentLayout: LayoutRectangle,
+        childLayout: LayoutRectangle,
+        contentOffset: NativeScrollPoint
+      ) => NativeScrollPoint & { animated?: boolean }
+    }
   ) => void
 }
 
