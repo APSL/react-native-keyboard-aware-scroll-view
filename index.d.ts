@@ -3,12 +3,8 @@
 // Definitions by: Kyle Roach <https://github.com/iRoachie>
 // TypeScript Version: 2.3.2
 
-import * as React from 'react'
-import {
-  ScrollViewProps,
-  FlatListProps,
-  SectionListProps
-} from 'react-native'
+import * as React from "react";
+import { ScrollViewProps, FlatListProps, SectionListProps } from "react-native";
 
 interface KeyboardAwareProps {
   /**
@@ -18,7 +14,7 @@ interface KeyboardAwareProps {
    * @type {function}
    * @memberof KeyboardAwareProps
    */
-  innerRef?: (ref: JSX.Element) => void
+  innerRef?: (ref: JSX.Element) => void;
   /**
    * Adds an extra offset that represents the TabBarIOS height.
    *
@@ -26,7 +22,7 @@ interface KeyboardAwareProps {
    * @type {boolean}
    * @memberof KeyboardAwareProps
    */
-  viewIsInsideTabBar?: boolean
+  viewIsInsideTabBar?: boolean;
 
   /**
    * Coordinates that will be used to reset the scroll when the keyboard hides.
@@ -38,9 +34,9 @@ interface KeyboardAwareProps {
    * @memberof KeyboardAwareProps
    */
   resetScrollToCoords?: {
-    x: number
-    y: number
-  }
+    x: number;
+    y: number;
+  };
 
   /**
    * Lets the user enable or disable automatic resetScrollToCoords
@@ -48,7 +44,7 @@ interface KeyboardAwareProps {
    * @type {boolean}
    * @memberof KeyboardAwareProps
    */
-  enableResetScrollToCoords?: boolean
+  enableResetScrollToCoords?: boolean;
 
   /**
    * When focus in TextInput will scroll the position
@@ -59,7 +55,7 @@ interface KeyboardAwareProps {
    * @memberof KeyboardAwareProps
    */
 
-  enableAutomaticScroll?: boolean
+  enableAutomaticScroll?: boolean;
   /**
    * Enables keyboard aware settings for Android
    *
@@ -68,7 +64,7 @@ interface KeyboardAwareProps {
    * @type {boolean}
    * @memberof KeyboardAwareProps
    */
-  enableOnAndroid?: boolean
+  enableOnAndroid?: boolean;
 
   /**
    * Adds an extra offset when focusing the TextInputs.
@@ -77,7 +73,7 @@ interface KeyboardAwareProps {
    * @type {number}
    * @memberof KeyboardAwareProps
    */
-  extraHeight?: number
+  extraHeight?: number;
 
   /**
    * Adds an extra offset to the keyboard.
@@ -88,7 +84,7 @@ interface KeyboardAwareProps {
    * @type {number}
    * @memberof KeyboardAwareProps
    */
-  extraScrollHeight?: number
+  extraScrollHeight?: number;
 
   /**
    * Sets the delay time before scrolling to new position
@@ -98,49 +94,49 @@ interface KeyboardAwareProps {
    * @type {number}
    * @memberof KeyboardAwareProps
    */
-  keyboardOpeningTime?: number
+  keyboardOpeningTime?: number;
 
   /**
    * Callback when the keyboard will show.
    *
    * @param frames Information about the keyboard frame and animation.
    */
-  onKeyboardWillShow?: (frames: Object) => void
+  onKeyboardWillShow?: (frames: Object) => void;
 
   /**
    * Callback when the keyboard did show.
    *
    * @param frames Information about the keyboard frame and animation.
    */
-  onKeyboardDidShow?: (frames: Object) => void
+  onKeyboardDidShow?: (frames: Object) => void;
 
   /**
    * Callback when the keyboard will hide.
    *
    * @param frames Information about the keyboard frame and animation.
    */
-  onKeyboardWillHide?: (frames: Object) => void
+  onKeyboardWillHide?: (frames: Object) => void;
 
   /**
    * Callback when the keyboard did hide.
    *
    * @param frames Information about the keyboard frame and animation.
    */
-  onKeyboardDidHide?: (frames: Object) => void
+  onKeyboardDidHide?: (frames: Object) => void;
 
   /**
    * Callback when the keyboard frame will change.
    *
    * @param frames Information about the keyboard frame and animation.
    */
-  onKeyboardWillChangeFrame?: (frames: Object) => void
+  onKeyboardWillChangeFrame?: (frames: Object) => void;
 
   /**
    * Callback when the keyboard frame did change.
    *
    * @param frames Information about the keyboard frame and animation.
    */
-  onKeyboardDidChangeFrame?: (frames: Object) => void
+  onKeyboardDidChangeFrame?: (frames: Object) => void;
 }
 
 interface KeyboardAwareScrollViewProps
@@ -154,19 +150,19 @@ interface KeyboardAwareSectionListProps<ItemT>
     SectionListProps<ItemT> {}
 
 interface KeyboardAwareState {
-  keyboardSpace: number
+  keyboardSpace: number;
 }
 
 declare class ScrollableComponent<P, S> extends React.Component<P, S> {
-  getScrollResponder: () => void
-  scrollToPosition: (x: number, y: number, animated?: boolean) => void
-  scrollToEnd: (animated?: boolean) => void
-  scrollForExtraHeightOnAndroid: (extraHeight: number) => void
+  getScrollResponder: () => void;
+  scrollToPosition: (x: number, y: number, animated?: boolean) => void;
+  scrollToEnd: (animated?: boolean) => void;
+  scrollForExtraHeightOnAndroid: (extraHeight: number) => void;
   scrollToFocusedInput: (
     reactNode: Object,
     extraHeight?: number,
     keyboardOpeningTime?: number
-  ) => void
+  ) => void;
 }
 
 export class KeyboardAwareMixin {}
@@ -174,11 +170,11 @@ export class KeyboardAwareScrollView extends ScrollableComponent<
   KeyboardAwareScrollViewProps,
   KeyboardAwareState
 > {}
-export class KeyboardAwareFlatList extends ScrollableComponent<
-  KeyboardAwareFlatListProps<any>,
+export class KeyboardAwareFlatList<T> extends ScrollableComponent<
+  KeyboardAwareFlatListProps<T>,
   KeyboardAwareState
 > {}
-export class KeyboardAwareSectionList extends ScrollableComponent<
-  KeyboardAwareSectionListProps<any>,
+export class KeyboardAwareSectionList<T> extends ScrollableComponent<
+  KeyboardAwareSectionListProps<T>,
   KeyboardAwareState
 > {}
