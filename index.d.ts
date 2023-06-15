@@ -7,7 +7,8 @@ import * as React from 'react'
 import {
   ScrollViewProps,
   FlatListProps,
-  SectionListProps
+  SectionListProps,
+  ViewProps
 } from 'react-native'
 
 interface KeyboardAwareProps {
@@ -169,6 +170,11 @@ declare class ScrollableComponent<P, S> extends React.Component<P, S> {
   ) => void
 }
 
+export function listenToKeyboardEvents (options: any): (
+  (ScrollableComponent: React$Component, userOptions?: KeyboardAwareHOCOptions = {}) =>
+    typeof React.Component<KeyboardAwareHOCProps, KeyboardAwareHOCState>
+  );
+
 export class KeyboardAwareMixin {}
 export class KeyboardAwareScrollView extends ScrollableComponent<
   KeyboardAwareScrollViewProps,
@@ -182,3 +188,44 @@ export class KeyboardAwareSectionList extends ScrollableComponent<
   KeyboardAwareSectionListProps<any>,
   KeyboardAwareState
 > {}
+
+export type KeyboardAwareHOCOptions = ?{
+  enableOnAndroid: boolean,
+  contentContainerStyle: ?Object,
+  enableAutomaticScroll: boolean,
+  extraHeight: number,
+  extraScrollHeight: number,
+  enableResetScrollToCoords: boolean,
+  keyboardOpeningTime: number,
+  viewIsInsideTabBar: boolean,
+  refPropName: string,
+  extractNativeRef: Function
+}
+
+export type KeyboardAwareHOCProps = ScrollViewProps & {
+  viewIsInsideTabBar?: boolean,
+  resetScrollToCoords?: {
+    x: number,
+    y: number
+  },
+  enableResetScrollToCoords?: boolean,
+  enableAutomaticScroll?: boolean,
+  extraHeight?: number,
+  extraScrollHeight?: number,
+  keyboardOpeningTime?: number,
+  onScroll?: Function,
+  update?: Function,
+  contentContainerStyle?: any,
+  enableOnAndroid?: boolean,
+  innerRef?: Function,
+  onKeyboardWillShow?: Function,
+  onKeyboardDidShow?: Function,
+  onKeyboardWillHide?: Function,
+  onKeyboardDidHide?: Function,
+  onKeyboardWillChangeFrame?: Function,
+  onKeyboardDidChangeFrame?: Function,
+}
+
+export type KeyboardAwareHOCState = {
+  keyboardSpace: number
+}
